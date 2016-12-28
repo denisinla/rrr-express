@@ -11,13 +11,16 @@ _uses create-react-app + react-router + express_
 
 2: ``npm run eject``
 
-3: Edit webpack.config.dev.js in loaders array to reflect:
+3: Edit webpack.config.dev.js in exclude and loaders array to reflect:
+
+```
+/\.scss$/,
+```
 
 ```
 {
-    test: /\.js$/,
-    include: paths.appSrc,
-    loader: 'babel',
-    query: require('./babel.dev')
-  }
+  test: /\.scss$/,
+  include: paths.appSrc,
+  loaders: ["style", "css", "sass"]
+},
 ```
