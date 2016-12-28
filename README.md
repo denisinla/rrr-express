@@ -5,12 +5,13 @@ Quick react/react-router package for fast development.
 
 _uses create-react-app + react-router + express_
 
-### Adding scss support
+### Adding scss to project (this will require you to eject)
 
-``npm install sass-loader node-sass --save-dev``
-``npm run eject``
+1: ``npm install sass-loader node-sass --save-dev``
 
-Edit webpack.config.dev.js in loaders array to reflect:
+2: ``npm run eject``
+
+3: Edit webpack.config.dev.js in loaders array to reflect:
 
 ```
 {
